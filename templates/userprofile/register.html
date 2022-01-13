@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    账号注册
+{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <br>
+                <form method="post" action=".">
+                    {% csrf_token %}
+                    <div class="form-group col-md-4">
+                        <label for="username">usernamee</label>
+                        <input type="text" class="form-control" id="username" name="username" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" id="email" name="email">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="password">passwordd</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="password2">confirm passwordd</label>
+                        <input type="password" class="form-control" id="password2" name="password2" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
